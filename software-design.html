@@ -21,21 +21,43 @@
   <section>
     <h2>Artifact Overview</h2>
     <p>
-      This artifact is a rescue animal management application developed in Java. 
-      The application is console-based and allows users to intake new rescue dogs and monkeys, 
-      reserve animals, and print lists of dogs, monkeys, or available rescue animals through a menu system. 
-      This project was originally developed as a final project while I was enrolled in IT-145: Foundation in Application Development.
+      This artifact is an inventory tracker application originally developed in C++. The application is console-based and reads grocery item data from a text file, creates a backup file 
+      containing item names and their frequencies, and allows the user to search for specific items, list all items and their quantities, and print a histogram through a menu loop.
+      This program was originally developed as a final project while I was enrolled in CS-210: Programming Languages.
     </p>
   </section>
 
   <section>
     <h2>Narrative</h2>
     <p>
-      ***Narrative Here!***
+      I included this artifact in my ePortfolio because it gave me the opportunity to show my ability to review an existing application, identify areas for improvment, and port the existing program functionaluity 
+      into a more structured Java program. One weakness in the original C++ version was that much of the program logic was contained in a single class. The same class handledfile management, menu
+      navigation, item searching, frequency listing, and histogram generation. 
+      Improving upon this design allowed me to demonstrate my ability to seperate application logic inot focused classes, including a main application class, a file manager class, a menu manager class and an
+      inventory manager class. The seperation also improved the flexibility of the application becuase each class has a focused responsibility and communicates with the other classes through clearly defined methods.
+    </p>
+    <p>
+      Another weakness in the original application was that several functions repeatedly traversed the input file to complete different tasks. 
+      The program read through the file when searching for a specific item, rebuilt frequency data when listing all items, and repeated similar logic when generating the histogram.
+      Improving this weakness in the code base allowed me to demonstrate my ability to use a more efficient data structure by loading the inventory data once and storing item frequencies in a reusable HashMap.
+      This improved the overall structure of the program, reduced repeatd file-processing logic, and made the applciation easier to maintain and expand.
+    </p>
+    <p>
+      The enhancements to this artifact demonstrated my ability to design and develop a technically sound software solution with a clear and organized structure. 
+      Redesigning the original C++ application as a more modular Java application allowed me to apply software engineering principles related to maintainability, 
+      organization, and reusable design. By separating file management, menu navigation, and inventory operations into focused classes, the enhanced version improves 
+      readability and makes the application easier to maintain, test, and expand.
+    </p>
+    <p>
+      The process of enhancing this artifact helped me better understand how importatn structure and speration of responsibilites are when improving an existing application.
+      One challenge i faced was deciding how to divide the original C++ tracker class into multiple Java classes without losing the original functionality. i has to design a new class structure and decide
+      which responsibilites belonged in each class. For example, file operations were placed in the FileManager class, menu logic was placed in the MenuManager class, and inventory-related operations were placed in the 
+      InventoryManager class. Another challenge was adapting the program from repeatedly reading a file to loading the data once into a HashMap and then reusing that stored data throughout the application.
+      This required adding helper methods to support the new structure, such as adding inventory items into the HashMap, retrieving the frequency of a specific item, and providing access to the stored item frequencies
+      when creating the backup file. This process reinforeced that porting a program to a new language and redesigning it around a resuable in-memory data structure requires changes to the overall application design,
+      organization, and logical flow.
     </p>
   </section>
-
-  <section>
     <h2>Project Links</h2>
     <ul>
       <li><a href="Orig_Artifact_Link_here">Original Artifact</li>
