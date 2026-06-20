@@ -2,37 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Databases Enhancement</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <main>
   <header>
     <h1>Databases Enhancement</h1>
     <nav>
       <a href="index.html">Home</a>
     </nav>
   </header>
-
-<main>
   <section>
     <h2>Artifact Overview</h2>
     <p>
-      ***Description Here!***
+      This artifact is a rescue animal management application developed in Java. The application is console-based and allows users to intake new 
+      rescue dogs and monkeys, reserve animals, and print lists of dogs, monkeys, or available rescue animals through a menu system. This project was 
+      originally developed as a final project while I was enrolled in IT-145: Foundation in Application development.
     </p>
   </section>
 
   <section>
     <h2>Narrative</h2>
     <p>
-      ***Narrative Here!***
+      I included this artifact in my ePortfolio because it gave me the opportunity to demonstrate my ability to enhance an existing Java application by 
+      adding persistent database functionality. In the original version of the application, animal records were stored only while the program was running, 
+      meaning newly added or updated animal records would not remain available after the program closed. Improving this weakness allowed me to demonstrate 
+      my ability to connect a Java application to MongoDB and store rescue animal records in a persistent database.
+    </p>
+    <p>
+      Adding database functionality also required created a dedicated AniamalDatbase class to provide database operations for the application. This class contains 
+      the methods used to connect to MongoDB, save dog and monkey records, load saved records, and update animal reservation status. Keeping the database logic in 
+      a separate class improved the organization of the application by separating database operations from the rest of the program logic. This structure also 
+      supports better control over how animal records are accessed and updated because database interactions are handled through specific methods rather than being 
+      spread throughout the application.
+    </p>
+    <p>
+      This enhancement also integrated database functionality while maintaining the runtime structure created during the previous HashMap enhancement. 
+      When the application starts, saved dog and monkey records are loaded from MongoDB and added into the appropriate HashMaps. This allows the program to 
+      continue using HashMaps for runtime operations while using MongoDB for persistent storage. New dogs and monkeys are saved to the database during intake, 
+      and reservation changes are updated in MongoDB when an animal is reserved. These changes improved the reliability of the application because animal records 
+      and reservation updates can now be preserved across program runs.
+    </p>
+    <p>
+      These enhancements met the course outcomes I planned to address, which were Course Outcome 1 and Course Outcome 5. Course Outcome 1 was addressed by improving 
+      how rescue animal records are stored, accessed, and used to support decision-making. By adding persistent database storage, the application can provide more 
+      reliable information about animal availability, training status, reservation status, and service location. Course Outcome 5 was addressed by improving controlled 
+      data access through a dedicated database class and more organized handling of animal records. During the enhancement, database access was structured through specific 
+      methods for saving records, loading records, and updating reservation status, which helps make data access more consistent and controlled. I do not currently 
+      have any new updates to my outcome-coverage plan.
+    </p>
+    <p>
+      One challenge I faced was integrating MongoDB with the existing program logic while still preserving the application’s runtime structure. The application needed to 
+      save records permanently in MongoDB, but it also needed to load those records back into the program’s HashMaps so the existing methods could continue working correctly. 
+      At first, I had issues with records being saved in MongoDB but not appearing in the application after restarting the program because the saved records were not being 
+      loaded back into the HashMaps. I used MongoDB Compass to verify that the records were actually being added to the database, which helped me narrow the problem down to 
+      the loading process rather than the save process. After correcting the loading functionality, I used MongoDB Compass again to confirm that new records were added to the 
+      animals collection and that reservation status changed when an animal was reserved. This process helped me better understand how to implement different database 
+      operations into an existing codebase and the importance of testing database functionality from both the application side and the database side. 
     </p>
   </section>
 
   <section>
     <h2>Project Links</h2>
     <ul>
-      <li><a href="Orig_Artifact_Link_here">Original Artifact</li>
-      <li><a href="Enh_Artifact_Link_here">Enhanced Artifact</li>
+      <li><a href="Orig_Artifact_Link_here">Original Artifact</a></li>
+      <li><a href="Enh_Artifact_Link_here">Enhanced Artifact</a></li>
     </ul>
   </section>
 </main>
