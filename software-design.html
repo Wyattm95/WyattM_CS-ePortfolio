@@ -89,27 +89,22 @@
         <figure>
           <h4>Original</h4>
 
-          <img
-            src="https://github.com/Wyattm95/WyattM_CS-ePortfolio/blob/main/assets/software-design/Orig_findItem.png"
-            alt="Original C++ findItem method">
-
-          <figcaption>
-            The original findItem() method reset the input stream and traversed the
-            entire file each time the user searched for an item, counting matches during the search.
-          </figcaption>
-        </figure>
-        <figure>
-          <h4>Enhanced</h4>
-
-          <img
-            src="https://github.com/Wyattm95/WyattM_CS-ePortfolio/blob/main/assets/software-design/ENH_findItem.png"
-            alt="Enhanced Java findItem method">
-
-          <figcaption>
-            The enhanced findItem() method retrieves the item frequency from inventory data
-            stored in a resuable HashMap. Because the file data is loaded earlier, the method
-            no longer needs to reopen or traverse the input file for each search.
-          </figcaption>
+      <img 
+        src="assets/software-design/Orig_findItem.png" 
+        alt="Original C++ findItem method that resets and traverses the input file to count matching items"> 
+          <figcaption> The original <code>findItem()</code> method reset the input stream and traversed the entire 
+            file each time the user searched for an item, counting matches during the search. 
+          </figcaption> 
+        </figure> 
+        <figure> 
+          <h4>Enhanced</h4> 
+          <img 
+            src="assets/software-design/ENH_findItem.png" 
+            alt="Enhanced Java findItem method that retrieves an item frequency from data stored in a HashMap"> 
+          <figcaption> The enhanced <code>findItem()</code> method retrieves the item frequency from inventory data stored 
+            in a reusable <code>HashMap</code>. Because the file data is loaded earlier, the method no longer needs to reopen 
+            or traverse the input file for each search. 
+          </figcaption> 
         </figure>
       </div>
     </section>
