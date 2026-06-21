@@ -6,43 +6,6 @@ body {
 
 main {
   max-width: 850px;
-  padding: 20px;
-}
-
-.comparison-section {
-  margin-top: 30px;
-}
-
-.comparison-grid figure {
-  flex: 1;
-  margin: 0;
-}
-
-.comparison-grid h4 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.comparison-grid img {
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  height: auto;
   margin: 0 auto;
-  border: 1px solid #cccccc;
-}
-
-.code-comparison .comparison-grid img {
-  max-width: 600px;
-}
-
-.comparison-grid figcaption {
-  margin-top: 10px;
-  line-height: 1.5;
-}
-
-@media (max-width: 700px) {
-  .comparison-grid {
-    flex-direction: column;
-  }
+  padding: 20px;
 }
