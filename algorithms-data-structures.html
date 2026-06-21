@@ -43,38 +43,6 @@
       are stored using a unique key created from the animal type and animal name, which allows the program to check for existing animal records more efficiently.
     </p>
 
-    <section class="comparison-section">
-  <h3>Data Structure Comparison</h3>
-
-  <div class="comparison-grid">
-    <figure>
-      <h4>Original</h4>
-
-      <img
-        src="assets/algorithms-data-structures/Orig_Arraylists.png"
-        alt="Original Rescue Animal code showing dog and monkey ArrayLists">
-
-      <figcaption>
-        The original application stored rescue animals in separate ArrayList collections and 
-        checked for duplicate dog records by looping through the list one animla at a time.
-      </figcaption>
-    </figure>
-
-    <figure>
-      <h4>Enhanced</h4>
-
-      <img
-        src="assets/algorithms-data-structures/ENH_HashMap.png"
-        alt="Enhanced Rescue Animal code showing HashMap-based record storage, key generation, and helper methods in the AnimalManager class">
-
-      <figcaption>
-        The enhanced application stores rescue animal records in HashMap collections and 
-        uses a generated key based on animal type and name. This allows the program to orgaize records more efficiently 
-        and supports faster duplicate checks than the original ArrayList approach.
-      </figcaption>
-    </figure>
-  </div>
-</section>
     <p>
       Another weakness in the original application was that much of the program logic was contained in the Driver class. This class handled menu navigation, 
       user input, animal intake, reservation logic, printing animal lists, and animal record storage. Improving this weakness allowed me to demonstrate my ability 
