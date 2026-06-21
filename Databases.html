@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Databases Enhancement</title>
+  <title>Database Enhancement</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -59,8 +59,9 @@
       The enhancements to this artifact met the course outcomes I planned to address, which were Course Outcomes 1 and 5. Course Outcome 1 focuses on using collaborative 
       strategies and reliable information to support decision-making in computer science. This outcome was addressed by improving how rescue animal records are stored, 
       accessed, and used to provide dependable information about animal availability, training status, reservation status, and service location. Course Outcome 5 focuses 
-      on developing a security mindset that anticipates vulnerabilities, protects data, and supports secure system design. This outcome was addressed by improving controlled 
-      data access through a dedicated AnimalDatabase class and organizing database operations through specific methods for saving records, loading records, and updating reservation status.
+      on developing a security mindset that anticipates vulnerabilities, protects data, and supports secure system design. This outcome was addressed by centralizing database 
+      access through a dedicated AnimalDatabase class and organizing database operations through specific methods for saving records, loading records, and updating reservation status. 
+      This structure reduces unnecessary direct interaction with the database and provides a clearer location for managing validation, connection settings, and future security improvements.
     </p>
     <p>
       One challenge I faced was integrating MongoDB with the existing program logic while still preserving the application’s runtime structure. The application needed to 
