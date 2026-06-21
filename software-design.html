@@ -44,36 +44,37 @@
       inventory manager class. The separation also improved the flexibility of the application because each class has a focused responsibility and communicates with the other classes through clearly defined methods.
     </p>
 
-    <section class="comparison-section">
-      <h3>Class Structure Comparison</h3>
+<section class="comparison-section">
+  <h3>Class Structure Comparison</h3>
 
-      <div class="comparison-grid">
-        <figure>
-          <h4>Original</h4>
+  <div class="comparison-grid">
+    <figure>
+      <h4>Original</h4>
 
-          <img
-            src="https://github.com/Wyattm95/WyattM_CS-ePortfolio/blob/main/assets/software-design/Orig_Tracker_classes.png"
-            alt="Original C++ Inventory Tracker file structure">
+      <img
+        src="assets/software-design/Orig_Tracker_classes.png"
+        alt="Original C++ Inventory Tracker file structure">
 
-          <figcaption>
-            The original C++ application placed most of the application logic
-            withing the Tracker class.
-          </figcaption>
-        </figure>
-        <figure>
-          <h4>Enhanced</h4>
+      <figcaption>
+        The original C++ application placed most of the application logic
+        within the Tracker class.
+      </figcaption>
+    </figure>
 
-          <img
-            src="https://github.com/Wyattm95/WyattM_CS-ePortfolio/blob/main/assets/software-design/ENH_Tracker_classes.png"
-            alt="Enhanced Java Inventory Tracker class structure">
+    <figure>
+      <h4>Enhanced</h4>
 
-          <figcaption>
-            The enhanced Java application seperates application startup, file handling,
-            menu navigation, and inventory operations into focused classes.
-          </figcaption>
-        </figure>
-      </div>
-    </section>
+      <img
+        src="assets/software-design/ENH_Tracker_classes.png"
+        alt="Enhanced Java Inventory Tracker class structure">
+
+      <figcaption>
+        The enhanced Java application separates application startup, file handling,
+        menu navigation, and inventory operations into focused classes.
+      </figcaption>
+    </figure>
+  </div>
+</section>
     <p>
       Another weakness in the original application was that several functions repeatedly traversed the input file to complete different tasks. 
       The program read through the file when searching for a specific item, rebuilt frequency data when listing all items, and repeated similar logic when generating the histogram.
