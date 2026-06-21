@@ -32,6 +32,10 @@ main {
   border: 1px solid #cccccc;
 }
 
+.code-comparison .comparison-grid img {
+  max-width: 450px;
+}
+
 .comparison-grid figcaption {
   margin-top: 10px;
   line-height: 1.5;
