@@ -80,6 +80,38 @@
       Improving this weakness in the code base allowed me to demonstrate my ability to use a more efficient data structure by loading the inventory data once and storing item frequencies in a reusable HashMap.
       This improved the overall structure of the program, reduced repeated file-processing logic, and made the application easier to maintain and expand.
     </p>
+
+      <section class="comparison-section">
+      <h3>Item Search Method Comparison</h3>
+
+      <div class="comparison-grid">
+        <figure>
+          <h4>Original</h4>
+
+          <img
+            src="https://github.com/Wyattm95/WyattM_CS-ePortfolio/blob/main/assets/software-design/Orig_findItem.png"
+            alt="Original C++ findItem method">
+
+          <figcaption>
+            The original findItem() method reset the input stream and traversed the
+            entire file each time the user searched for an item, counting matches during the search.
+          </figcaption>
+        </figure>
+        <figure>
+          <h4>Enhanced</h4>
+
+          <img
+            src="https://github.com/Wyattm95/WyattM_CS-ePortfolio/blob/main/assets/software-design/ENH_findItem.png"
+            alt="Enhanced Java findItem method">
+
+          <figcaption>
+            The enhanced findItem() method retrieves the item frequency from inventory data
+            stored in a resuable HashMap. Because the file data is loaded earlier, the method
+            no longer needs to reopen or traverse the input file for each search.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
     <p>
       The enhancements to this artifact met the course outcome I originally planned to address, which was Course Outcome 2. Course Outcome 2 focuses on creating professional-quality 
       technical work that is coherent, technically sound, and appropriate for its intended audience and purpose. Redesigning the original C++ application as a more modular Java application 
