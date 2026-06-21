@@ -44,37 +44,6 @@
       inventory manager class. The separation also improved the flexibility of the application because each class has a focused responsibility and communicates with the other classes through clearly defined methods.
     </p>
 
-<section class="comparison-section">
-  <h3>Class Structure Comparison</h3>
-
-  <div class="comparison-grid">
-    <figure>
-      <h4>Original</h4>
-
-      <img
-        src="assets/software-design/Orig_Tracker_classes.png"
-        alt="Original C++ Inventory Tracker file structure">
-
-      <figcaption>
-        The original C++ application placed most of the application logic
-        within the Tracker class.
-      </figcaption>
-    </figure>
-
-    <figure>
-      <h4>Enhanced</h4>
-
-      <img
-        src="assets/software-design/ENH_Tracker_classes.png"
-        alt="Enhanced Java Inventory Tracker class structure">
-
-      <figcaption>
-        The enhanced Java application separates application startup, file handling,
-        menu navigation, and inventory operations into focused classes.
-      </figcaption>
-    </figure>
-  </div>
-</section>
     <p>
       Another weakness in the original application was that several functions repeatedly traversed the input file to complete different tasks. 
       The program read through the file when searching for a specific item, rebuilt frequency data when listing all items, and repeated similar logic when generating the histogram.
@@ -82,38 +51,13 @@
       This improved the overall structure of the program, reduced repeated file-processing logic, and made the application easier to maintain and expand.
     </p>
 
-      <section class="comparison-section">
-      <h3>Item Search Method Comparison</h3>
-
-      <div class="comparison-grid">
-        <figure>
-          <h4>Original</h4>
-
-      <img 
-        src="assets/software-design/Orig_findItem.png" 
-        alt="Original C++ findItem method that resets and traverses the input file to count matching items"> 
-          <figcaption> The original <code>findItem()</code> method reset the input stream and traversed the entire 
-            file each time the user searched for an item, counting matches during the search. 
-          </figcaption> 
-        </figure> 
-        <figure> 
-          <h4>Enhanced</h4> 
-          <img 
-            src="assets/software-design/ENH_findItem.png" 
-            alt="Enhanced Java findItem method that retrieves an item frequency from data stored in a HashMap"> 
-          <figcaption> The enhanced <code>findItem()</code> method retrieves the item frequency from inventory data stored 
-            in a reusable <code>HashMap</code>. Because the file data is loaded earlier, the method no longer needs to reopen 
-            or traverse the input file for each search. 
-          </figcaption> 
-        </figure>
-      </div>
-    </section>
     <p>
       The enhancements to this artifact met the course outcome I originally planned to address, which was Course Outcome 2. Course Outcome 2 focuses on creating professional-quality 
       technical work that is coherent, technically sound, and appropriate for its intended audience and purpose. Redesigning the original C++ application as a more modular Java application 
       demonstrated my ability to develop a technically sound software solution with a clear and organized structure. By separating the application into focused classes for file management, 
       menu navigation, and inventory operations, the enhanced version improves readability, maintainability, and overall organization.
     </p>
+    
     <p>
       The process of enhancing this artifact helped me better understand how important structure and separation of responsibilities are when improving an existing application.
       One challenge I faced was deciding how to divide the original C++ Tracker class into multiple Java classes without losing the original functionality. I had to design a new class structure and decide
